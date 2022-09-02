@@ -1,0 +1,40 @@
+
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+}
+.container div{
+    flex:1;
+}
+.item{
+    text-align: center;
+    height: 100vh;
+}
+
+.img{
+    text-align: center;
+    background-image: url(./img/knight.jpg);
+
+}
+.brand{
+    position: relative;
+    color: aliceblue;
+    top: 20vh;
+    background-color: rgba(255, 255, 255, 0.156);
+    font-size: 3rem;
+}
+@media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+    .brand{
+        position: static;
+        top: 0 ;
+    }
+    .img{
+        background-size: 100vh;
+        
+    }
+  }
