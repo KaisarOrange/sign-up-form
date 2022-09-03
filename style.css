@@ -1,3 +1,22 @@
+:root{
+    font-family: sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt);
+
+    /* outline: 1px solid red; */
+}
+
+#first_name{
+    font-size: 0.5rem;
+}
+label[for^=first_name]{
+    font-size: 0.5rem;
+}
 
 body{
     margin: 0;
@@ -5,39 +24,86 @@ body{
 .container{
     display: flex;
 }
-.container div{
-    flex:1;
-}
-.item{
-    text-align: center;
-    height: 100vh;
-}
+
 
 .img{
     text-align: center;
     background-image: url(./img/helo.jpg);
     background-size: 200vh;
+    width: 120vh;
+    height: 100vh;
 
 }
 .brand{
     position: relative;
-    color: aliceblue;
+    color: rgb(5, 5, 5);
     top: 20vh;
-    background-color: rgba(255, 255, 255, 0.156);
-    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.648);
+    display: flex;
+    height: auto;
+    -webkit-text-stroke: 1px black;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 20vh;
     
 }
-@media (max-width: 600px) {
+.login{
+    width: 60vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 6vw;
+    box-sizing: border-box;
+}
+.text{
+    width: 90%;
+}
+.text>*{
+    
+    margin: 0;
+    padding: 0;
+}
+.form{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.form-title{
+    width: 100%;
+}
+.input{
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+}
+.image{
+    height: 10vh;
+}
+
+.know{
+    
+    margin: 40px 0 80px
+}
+@media only screen and (max-width: 600px) {
     .container {
       flex-direction: column;
+      text-align: center;
     }
     .brand{
         position: static;
         padding: 15px;
+        width: 100vw;
+        height: auto;
     }
     .img{
         background-size: 120vh;
         display: flex;
+        height: 15vh;
         
+    }
+    .login{
+        width: auto;
+        height: auto;
     }
   }
