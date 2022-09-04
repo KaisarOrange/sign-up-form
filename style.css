@@ -1,22 +1,13 @@
-:root{
-    font-family: sans-serif;
-}
-*{
+
+ *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--txt);
+     /* outline: 1px solid red;   */
+} 
 
-    /* outline: 1px solid red; */
-}
-
-#first_name{
-    font-size: 0.5rem;
-}
-label[for^=first_name]{
-    font-size: 0.5rem;
-}
 
 body{
     margin: 0;
@@ -54,10 +45,11 @@ body{
     flex-flow: column nowrap;
     justify-content: center;
     padding-left: 6vw;
-    box-sizing: border-box;
 }
 .text{
-    width: 90%;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.2rem;
 }
 .text>*{
     
@@ -68,24 +60,51 @@ body{
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
+    width: 90%;
 }
 .form-title{
     width: 100%;
+    font-size: 1.2rem;
 }
 .input{
-    width: 40%;
+    width: 42%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    font-size: 0.7rem;
+    text-transform: uppercase;
 }
+input:focus{
+    border-color: rgba(255, 220, 174, 0.637);
+}
+input[type="text"], input[type="password"], textarea, select,input[type="email"],input[type="tel"] { 
+    outline: none;
+  }
 .image{
     height: 10vh;
+}
+.btn{
+    background-color: rgba(255, 220, 174, 0.637);
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.btn:active{
+    background-color: rgba(0, 0, 0, 0.125);
 }
 
 .know{
     
     margin: 40px 0 80px
 }
-@media only screen and (max-width: 600px) {
+/* input[type="text"],[type="email"],[type="tel"]
+{
+    font-size:10px;
+} */
+@media only screen and (max-width: 746px) {
+   
     .container {
       flex-direction: column;
       text-align: center;
@@ -100,10 +119,22 @@ body{
         background-size: 120vh;
         display: flex;
         height: 15vh;
+        width: auto;
         
     }
     .login{
         width: auto;
         height: auto;
+        align-items: center;
+        padding-left: 0;
+    }
+    .text{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .form{
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
     }
   }
